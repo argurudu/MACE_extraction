@@ -1,0 +1,39 @@
+'''
+Classify all positive sentences into 4 categories: historical MACE occurence, current MACE occurence, uncertain MACE occurence, and future risk of MACE occurence. 
+'''
+
+historical = []
+definite_existence = []
+uncertain_existence = []
+risk = []
+
+for sentences_per_report in df['only_positive']:
+    historical_to_add = []
+    definite_existence_to_add = []
+    uncertain_existence_to_add = []
+    risk_to_add = []
+    
+    for sent in sentences_per_report:
+        if len(markup_sentence(sent.lower(), modifiers, targets).edges()) < 1:
+            definite_existence_to_add.append(sent)
+        else:
+            for edge in (markup_sentence(sent.lower(), modifiers, targets).edges()):
+                used = False
+                if str(edge[0]).__contains__('historical'):
+                    historical_to_add.append(sent)
+                    used = True
+                    break
+                elif str(edge[0]).__contains__('future'):
+                    risk_to_add.append(sent)
+                    used = True
+                    break
+                elif str(edge[0]).__contains__('indication') or str(edge[0]).__contains__('ambivalent_existence'):
+                    uncertain_existence_to_add.append(sent)
+                    used = True
+                    break
+            if not used:
+                definite_existence_to_add.append(sent)
+    historical.append(historical_to_add)
+    definite_existence.append(definite_existence_to_add)
+    uncertain_existence.append(uncertain_existence_to_add)
+    risk.append(risk_to_add)

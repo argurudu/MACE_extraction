@@ -1,3 +1,5 @@
+from excluding_negation import df
+
 '''
 Classify all positive sentences into 4 categories: historical MACE occurence, current MACE occurence, uncertain MACE occurence, and future risk of MACE occurence. Add each type of sentence to its corresponding column.
 '''

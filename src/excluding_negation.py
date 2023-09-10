@@ -4,6 +4,10 @@
 import pyConTextNLP.pyConText as pyConText
 import pyConTextNLP.itemData as itemData
 import networkx as nx
+import pandas as pd
+import re
+
+from relevant_sentence_extraction import df
 
 '''
 Define the list of modifiers and targets for pyConText.

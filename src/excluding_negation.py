@@ -10,9 +10,9 @@ Define the list of modifiers and targets for pyConText.
 '''
 
 modifiers = itemData.get_items(
-    "file:///mnt/storage/MACE_extraction/pyConText_itemData/MACE_modifiers.txt")
+    "file:///MACE_extraction/src/MACE_modifiers.txt")
 targets = itemData.get_items(
-    "file:///mnt/storage/MACE_extraction/pyConText_itemData/MACE_targets.txt")
+    "file:///MACE_extraction/src/MACE_targets.txt")
 
 
 '''

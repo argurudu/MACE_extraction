@@ -4,7 +4,7 @@ import re
 '''
 Read the chosen dataset below.
 '''
-df = pd.read_csv(#include csv file)
+df = pd.read_csv('mimic-iv-note-deidentified-free-text-clinical-notes-2.2/note/discharge.csv.gz')
 
 
 '''

@@ -60,6 +60,12 @@ Type: MYOCARDIAL_INFARCT
 ---
 Comments: ''
 Direction: ''
+Lex: cardiomyopathy
+Regex: cardiomyopathy
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
 Lex: heart failure
 Regex: (cardiac|heart|myocardial) failure
 Type: HEART_FAILURE

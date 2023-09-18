@@ -114,6 +114,12 @@ Type: CORONARY_SYNDROME
 ---
 Comments: ''
 Direction: ''
+Lex: endocarditis
+Regex: endocarditis
+Type: CORONARY_SYNDROME
+---
+Comments: ''
+Direction: ''
 Lex: ACS
 Regex: \b[aA][cC][sS]\b
 Type: CORONARY_SYNDROME

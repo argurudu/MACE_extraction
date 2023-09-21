@@ -8,12 +8,14 @@ historical = []
 definite_existence = []
 uncertain_existence = []
 risk = []
+family = []
 
 for sentences_per_report in df['only_positive']:
     historical_to_add = []
     definite_existence_to_add = []
     uncertain_existence_to_add = []
     risk_to_add = []
+    family_to_add = []
     
     #Iterate through all relevant sentences
     for sent in sentences_per_report:
@@ -33,6 +35,12 @@ for sentences_per_report in df['only_positive']:
                     used = True
                     break
                 
+                #Classify as family history if family history modifier is present
+                elif str(edge[0]).__contains__('family_history'):
+                    family_to_add.append(sent)
+                    used = True
+                    break
+                    
                 #Classify as future risk if future modifier is present
                 elif str(edge[0]).__contains__('future'):
                     risk_to_add.append(sent)
@@ -52,11 +60,13 @@ for sentences_per_report in df['only_positive']:
     definite_existence.append(definite_existence_to_add)
     uncertain_existence.append(uncertain_existence_to_add)
     risk.append(risk_to_add)
+    family.append(family_to_add)
 
 df['MACE_historical'] = historical
 df['MACE_current_existence'] = definite_existence
 df['MACE_uncertain_existence'] = uncertain_existence
 df['MACE_risk'] = risk
+df['MACE_family_history'] = family
 
 
 '''

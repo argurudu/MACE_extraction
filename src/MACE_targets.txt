@@ -96,6 +96,12 @@ Type: HEART_FAILURE
 ---
 Comments: ''
 Direction: ''
+Lex: CHF
+Regex: \b[cC][hH][fF]\b
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
 Lex: ischemic heart disease
 Regex: ischemic heart disease
 Type: ISCHEMIC_HEART_DISEASE

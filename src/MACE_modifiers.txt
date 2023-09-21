@@ -18,7 +18,7 @@ Type: FAMILY_HISTORY
 ---
 Comments: ''
 Direction: bidirectional
-Lex: dad
+Lex: family
 Regex: dad|mom|father|mother|brother|sister|daughter|son
 Type: FAMILY_HISTORY
 ---

@@ -1,0 +1,161 @@
+Comments: ''
+Direction: ''
+Lex: myocardial infarction
+Regex: (myocardial|cardiac) infarct
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: myocardial necrosis
+Regex: (myocardial|coronary|cardiac) necrosis
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: heart attack
+Regex: heart (attack|infarct|rupture)
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: attack heart
+Regex: (attack|attacks|attacking) (heart|coronary)
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: coronary attack
+Regex: coronary attack
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: coronary artery occlusion
+Regex: (coronary|coronary artery) (occlusion|rupture)
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: MI
+Regex: \b[mM][iI]\b
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: AMI
+Regex: \b[aA][mM][iI]\b
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: infarct myocardial
+Regex: (infarction|infarction,|infarction;|infarct|infarctions,|infarcts|infarctions|infarct,|infarcts,) (myocardial|heart)
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: infarction of heart
+Regex: (infarction|infarct|rupture) of (heart|the heart|myocardium|the myocardium)
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: cardiomyopathy
+Regex: cardiomyopathy
+Type: MYOCARDIAL_INFARCT
+---
+Comments: ''
+Direction: ''
+Lex: heart failure
+Regex: (cardiac|heart|myocardial) failure
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: failure heart
+Regex: failure heart
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: myocarditis
+Regex: myocarditis
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: pericarditis
+Regex: pericarditis
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: HF
+Regex: \b[hH][fF]\b
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: CHF
+Regex: \b[cC][hH][fF]\b
+Type: HEART_FAILURE
+---
+Comments: ''
+Direction: ''
+Lex: ischemic heart disease
+Regex: ischemic heart disease
+Type: ISCHEMIC_HEART_DISEASE
+---
+Comments: ''
+Direction: ''
+Lex: myocardial ischemia
+Regex: myocardial ischemia
+Type: ISCHEMIC_HEART_DISEASE
+---
+Comments: ''
+Direction: ''
+Lex: IHD
+Regex: \b[iI][hH][dD]\b
+Type: ISCHEMIC_HEART_DISEASE
+---
+Comments: ''
+Direction: ''
+Lex: coronary syndrome
+Regex: coronary syndrome
+Type: CORONARY_SYNDROME
+---
+Comments: ''
+Direction: ''
+Lex: endocarditis
+Regex: endocarditis
+Type: CORONARY_SYNDROME
+---
+Comments: ''
+Direction: ''
+Lex: ACS
+Regex: \b[aA][cC][sS]\b
+Type: CORONARY_SYNDROME
+---
+Comments: ''
+Direction: ''
+Lex: stroke
+Regex: stroke
+Type: STROKE
+---
+Comments: ''
+Direction: ''
+Lex: cerebrovascular accident
+Regex: cerebrovascular accident
+Type: STROKE
+---
+Comments: ''
+Direction: ''
+Lex: cerebral infarction
+Regex: cerebral infarction
+Type: STROKE
+---
+Comments: ''
+Direction: ''
+Lex: CVA
+Regex: \b[cC][vV][aA]\b
+Type: STROKE

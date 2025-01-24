@@ -1,5 +1,7 @@
 import pandas as pd
 import re
+import nltk
+from nltk.tokenize import sent_tokenize
 
 '''
 Read the chosen dataset below.
@@ -14,7 +16,8 @@ Split all reports into sentence tokens that are separated by a period, new line,
 
 allSentences = []
 for text in df[r'text']:
-    allSentences.append(re.split(r'\.|\n|;', text))
+    sentence_tokens = sent_tokenize(text)
+    all_sentences.append(sentence_tokens)
 df[r'sentence_tokens'] = allSentences
 
 

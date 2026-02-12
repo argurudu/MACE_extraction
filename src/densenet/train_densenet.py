@@ -29,7 +29,7 @@ class CXRDataset(Dataset):
         return image
     
     def __getitem__(self, index):
-        y = self.df.at[self.df.index[index], 'mistral_binary']
+        y = self.df.at[self.df.index[index], 'MACE_label'] #Rule-based label, Mistral-generated label, or manually-annotated label
         x = self.image_loader(self.df.at[self.df.index[index], 'image_paths'])
         y = torch.tensor([y], dtype=torch.float)
         return x, y
@@ -48,9 +48,9 @@ other_transform = transforms.Compose([
                                     transforms.ToTensor(),
                                     transforms.Normalize(mean=[0.4756, 0.4756, 0.4756], std=[0.3011, 0.3011, 0.3011])
                                     ])
-df_train = pd.read_csv('/mnt/storage/MACE_extraction/src/image_classification/data/data_trial_18/MACE_training_data.csv')
-df_validation = pd.read_csv('/mnt/storage/MACE_extraction/src/image_classification/data/data_trial_18/MACE_validation_data.csv')
-df_test = pd.read_csv('/mnt/storage/MACE_extraction/src/image_classification/data/data_trial_18/MACE_testing_data.csv')
+df_train = pd.read_csv('training_data.csv')
+df_validation = pd.read_csv('validation_data.csv')
+df_test = pd.read_csv('testing_data.csv')
 datagen_train = CXRDataset(df =  df_train.copy(), augmentations = train_transform) 
 datagen_val = CXRDataset(df = df_validation.copy(), augmentations = other_transform) 
 datagen_test = CXRDataset(df = df_test.copy(),augmentations = other_transform) 
@@ -74,10 +74,10 @@ print_every = 1
 plot_every = 1
 batch_size = 8
 model_name = 'densenet121-finetuned'
-save_dir = '/mnt/storage/MACE_extraction/src/image_classification'
+save_dir = ''
 metric_name = 'val_loss'
 maximize_metric=False
-tensorboard_log_dir = os.path.join(save_dir, 'tensorboard_logs/run_21_tensorboard_logs')
+tensorboard_log_dir = os.path.join(save_dir, 'tensorboard_logs/densenet')
 writer = SummaryWriter(log_dir=tensorboard_log_dir)
 
 

@@ -1,3 +1,12 @@
+import numpy as np
+import pandas as pd
+from skimage import io
+import torch
+from torch.utils.data import Dataset, DataLoader
+import torchvision.transforms as transforms
+from transformers import LlavaForConditionalGeneration
+from tqdm import tqdm
+
 class CXRDataset(Dataset):
     def __init__(self, df, augmentations=None):
         self.df = df
@@ -15,7 +24,7 @@ class CXRDataset(Dataset):
         return image
     
     def __getitem__(self, index):
-        y = self.df.at[self.df.index[index], 'mistral_binary']
+        y = self.df.at[self.df.index[index], 'MACE_label']
         x = self.image_loader(self.df.at[self.df.index[index], 'image_paths'])
         y = torch.tensor([y], dtype=torch.float)
         return x, y, index

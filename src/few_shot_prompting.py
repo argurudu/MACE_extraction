@@ -75,7 +75,7 @@ note = "[CLINICAL NOTE TEXT]"
 message = build_mistral_messages(note)
 
 prompt = mistral_tokenizer.apply_chat_template(
-    messages,
+    message,
     add_generation_prompt=True,
     tokenize=False)
 

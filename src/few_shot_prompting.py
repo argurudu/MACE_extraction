@@ -1,10 +1,9 @@
 import torch
 import re
-from transformers import (
+from transformers import(
     AutoTokenizer,
     AutoModelForCausalLM,
-    BitsAndBytesConfig
-)
+    BitsAndBytesConfig)
 
 #Load Mistral-7B-Instruct Model
 mistral_id = "mistralai/Mistral-7B-Instruct-v0.3"
